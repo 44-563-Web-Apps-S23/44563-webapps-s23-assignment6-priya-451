@@ -30,7 +30,10 @@
         if(painter == guess){
             good++
             out.innerHTML = good
-            alert("You got it right")
+            alert("You got it right");
+
+        } else if (oops >= 10) {
+                document.getElementById("btn").onclick = giveAlert();
             
         } else {
             oops++
@@ -62,8 +65,13 @@
               document.getElementById("plant-image").src = "dahlia.webp";
               useImage = 1;
               break;
+              default:
           }
         }
+            function giveAlert() {
+            
+                    alert("Sorry, ran out of guesses.");
+            }
         </script>
         </body>
         </html>
